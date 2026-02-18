@@ -1,8 +1,7 @@
 // Lab1-p1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <stdio.h>;
-using namespace std;
+#include <stdio.h>
 
 int myatoi(char* nr, int nrc)
 {
