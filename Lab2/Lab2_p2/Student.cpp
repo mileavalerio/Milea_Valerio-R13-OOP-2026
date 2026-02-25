@@ -17,7 +17,7 @@ const char* Student::getName()
 
 bool Student::setGrade(float nota, char subj)
 {
-	if ((nota < 1.0f || nota > 10.0f) || !(subj != 'm' || subj != 'e' || subj != 'h'))
+	if ((nota < 1.0f || nota > 10.0f) || (subj != 'm' && subj != 'e' && subj != 'h'))
 		return false;
 	if (subj == 'm')
 		grades.math = nota;
@@ -38,5 +38,5 @@ float Student::getGrade(char subj)
 
 float Student::getAvg()
 {
-	return (getGrade('m') + getGrade('e') + getGrade('e')) / 3;
+	return (getGrade('m') + getGrade('e') + getGrade('h')) / 3;
 }
