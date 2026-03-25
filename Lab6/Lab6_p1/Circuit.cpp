@@ -9,9 +9,9 @@ Circuit::Circuit() {
 }
 
 Circuit::~Circuit() {
-	unsigned int i = 0;
-	while (cars[i] != nullptr)
-		delete cars[i++];
+	for (unsigned int i = 0; i < index; i++) {
+		delete cars[i];
+	}
 }
 
 void Circuit::SetLength(unsigned int len) {
